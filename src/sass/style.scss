@@ -6,6 +6,7 @@
     --header_bg-color: white;
     --theme-btn-bg: rgb(230, 221, 221);
     --today-heading-color:black;
+    //--today-heading-color:$today-light-mode;
 }
 
 .darkmode {
@@ -13,6 +14,7 @@
     --header_bg-color: black;
     --theme-btn-bg: rgb(230, 221, 221);
     --today-heading-color:white;
+    //--today-heading-color:$today-dark-mode;
 }
 
 * {
@@ -63,37 +65,40 @@ header {
     flex-direction: row;
     gap: 1.5rem;
 }
+.calc-display-controls {
+    .theme-btn {
+        border: none;
+        border-radius: 20px;
+        background-color: var(--theme-btn-bg);
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        display: flex;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.4rem;
 
-.calc-display-controls .theme-btn {
-    border: none;
-    border-radius: 20px;
-    background-color: var(--theme-btn-bg);
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    display: flex;
-    width: 2rem;
-    height: 2rem;
-    font-size: 1.4rem;
+        &:hover {
+            filter: brightness(90%);
+        }
+
+        i:last-child {
+            display: none;
+        }
+    }
 }
-
-.calc-display-controls .theme-btn:hover {
-    filter: brightness(90%);
+.darkmode {
+    .calc-display-controls {
+        .theme-btn {
+            i:first-child {
+                display: none;
+            }
+            i:last-child {
+                display: block;
+            }
+        }
+    }
 }
-
-.calc-display-controls .theme-btn i:last-child {
-    display: none;
-}
-
-.darkmode .calc-display-controls .theme-btn i:first-child {
-    display: none;
-}
-
-.darkmode .calc-display-controls .theme-btn i:last-child {
-    display: block;
-}
-
-
 h1 {
     color: var(--today-heading-color);
 }

@@ -71,11 +71,9 @@ header {
   height: 2rem;
   font-size: 1.4rem;
 }
-
 .calc-display-controls .theme-btn:hover {
   filter: brightness(90%);
 }
-
 .calc-display-controls .theme-btn i:last-child {
   display: none;
 }
@@ -83,7 +81,6 @@ header {
 .darkmode .calc-display-controls .theme-btn i:first-child {
   display: none;
 }
-
 .darkmode .calc-display-controls .theme-btn i:last-child {
   display: block;
 }
