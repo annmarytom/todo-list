@@ -9,9 +9,11 @@ A simple and elegant To-Do List application built with HTML, Sass, and JavaScrip
 - Add new tasks
 - Mark tasks as completed
 - Delete individual tasks
-- Clear all completed tasks
-- Responsive design for mobile and desktop
-- Modular Sass architecture for maintainable styling
+- dark mode and light mode theme
+- display greeting messages like good morning, good afternoon, good  evening and good night based on the time.
+
+
+
 
 ---
 
@@ -29,5 +31,5 @@ D:\frontend-magic\todo list\src
 
 ### 1. Clone the repository
 ```bash
-git 
+git https://github.com/annmarytom/todo-list.git
 cd todo list
