@@ -75,3 +75,27 @@ function disableDarkMode() {
     document.body.classList.remove('darkmode');
     localStorage.setItem('darkmodeStatus', 'inactive');
 }
+
+function updateGreetingImage() {
+    const img = document.getElementById("greetings-img");
+    const hour = new Date().getHours();
+
+    let imageName = "morning.jpg"; 
+
+    if (hour >= 5 && hour < 12) {
+        imageName = "morning.jpg";
+    } else if (hour >= 12 && hour < 17) {
+        imageName = "good afternoon.jpg";
+    } else if (hour >= 17 && hour < 20) {
+        imageName = "good evening.jpg";
+    } else {
+        imageName = "good night.jpg";
+    }
+
+    img.src = `/public/assets/images/${imageName}`;
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    updateGreetingImage();
+   
+});
