@@ -28,7 +28,7 @@ const paths = {
   }
 };
 
-// compile SCSS → CSS (with sourcemaps + minify)
+// compile SCSS → CSS 
 function styles() {
   return src(paths.styles.src)
     .pipe(sourcemaps.init())
